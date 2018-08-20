@@ -121,7 +121,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4Q-La-Wiz">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4Q-La-Wiz">
                                 <rect key="frame" x="19.5" y="597" width="335.5" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39783230629999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -141,7 +141,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="89a-zd-vTv" kind="show" id="iGX-U2-9Uz"/>
+                                    <action selector="onNextTapped:" destination="Dbs-jO-gX7" eventType="touchUpInside" id="BfP-Pe-sKn"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="J7t-Lp-Lce">
@@ -166,6 +166,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onMenTapped:" destination="Dbs-jO-gX7" eventType="touchUpInside" id="9xU-vT-ghP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5A-nb-QpW">
                                         <rect key="frame" x="0.0" y="70" width="335.5" height="50"/>
@@ -186,6 +189,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onWomenTapped:" destination="Dbs-jO-gX7" eventType="touchUpInside" id="HcJ-QE-Ajb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fub-XM-GSc">
                                         <rect key="frame" x="0.0" y="140" width="335.5" height="50"/>
@@ -206,6 +212,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="Dbs-jO-gX7" eventType="touchUpInside" id="ePo-wv-Swy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -241,6 +250,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ecs-qG-CJK"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="E4Q-La-Wiz" id="QlY-3s-zTn"/>
+                        <segue destination="89a-zd-vTv" kind="show" identifier="skillVCSegue" id="3aa-cv-sj3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wls-bQ-1Ow" sceneMemberID="firstResponder"/>
                 <exit id="o5g-Ql-2ck" userLabel="Exit" sceneMemberID="exit"/>
